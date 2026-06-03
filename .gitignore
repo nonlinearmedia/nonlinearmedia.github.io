@@ -1,0 +1,36 @@
+# macOS system files (essential to block)
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Thumbnails and system architectures
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Common text editor/IDE metadata
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*~
+
+# Local log files and runtime dumps
+*.log
+.deprecated/
+.to-delete/
+.bak/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build or backup folders you might accidentally copy
+node_modules/
+dist/
+build/
+*.bak
+*.tmp
