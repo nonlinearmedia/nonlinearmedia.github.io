@@ -1,0 +1,114 @@
+
+<html>
+  <title>Star Songs</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap" rel="stylesheet">
+
+  <link href="starsongs.css" rel="stylesheet">
+
+  <body>
+    <div id="ss_content">
+      <div id="ss_help_icon">?</div>
+      <div id="ss_title" title="Cosmic ray data from noaa.gov translated into musical notes">
+        Listen To Your Stars Sing
+      </div>
+      <br/>
+
+      <span class="ss_selector_prompt">Beat:&nbsp;</span>
+      <select class="ss_dropdown" id="ss_beats_selector">
+        <option value="1">Miss No Misstep</option>
+        <option value="1001100">Skipper Jack</option>
+        <option value="001101010101010">The Drunken Monk</option>
+      </select>
+      &nbsp; &nbsp;
+      <span class="ss_selector_prompt">Scale:&nbsp;</span>
+      <select class= "ss_dropdown" id="ss_scale_selector">
+        <option value="hindolam">Five Fiery Flintstones</option>
+        <option value="sivaranjani">Why Is The Ganges Blue?</option>
+        <option value="mohanam">Lots of Lovebirds</option>
+        <option value="malahari">The Golden Lotus</option>
+        <option value="shankarabaranam">Beads Of Glory</option>
+      </select>
+      <br/>
+
+      <textarea id="ss_patterns_input" autofocus=true>
+Hit the Button (or edit below first)
+less
+same
+more
+most</textarea>
+      <br/>
+
+      <button id="ss_start_button" onclick="ss_start();">Sing Surya Sing</button>
+    </div>
+
+    <div id=ss_footer>
+      Minutely proton incidence data, courtesy of <a href="http://www.noaa.gov">noaa.gov</a>
+    </div>
+
+    <!--
+        That's it. Below is simply a help panel. It has absolute page positioning and
+        programmatically controlled visibility
+    -->
+
+    <div id="ss_help_panel"><div id="ss_help_panel_content">
+      <p>The sounds you're hearing are derived from near-real-time data
+        from the US National Oceanic and Atmospheric Administration's free
+        data service.</p>
+
+      <p>Every minute, Earth is bombarded by subatomic particles thrown at
+        us from all over the cosmos, especially from the sun. Our telescopes
+        measure the intensity of this bombardment and beam that information
+        back to earth. Public service sites like noaa aggregate this data and
+        make them available to everyone.
+      </p>
+
+      <p>Column 8 in the data below gives proton intensity by the minute:</p>
+
+      <p>
+        <a href=https://services.swpc.noaa.gov/text/ace-swepam.txt>
+         https://services.swpc.noaa.gov/text/ace-swepam.txt
+        </a>
+      </p>
+
+      <p>
+        I track that column of minute-by-minute data and, starting from the
+        most recent measurement (this minute) and working backwards, emit one word for
+        each measurement by comparing it to the measurement considered immediately
+        prior: LEAST, LESS, SAME, MORE, OR MOST (plus LOW and HIGH for threshold breaches)
+      </p>
+
+      <p>
+        In the front-end js, I let user of the app enter a bunch of words like
+        "less", "more", etc., matching the user's lines (from the front-end) with the
+        list of words in the previous step (from-the-back-end at noaa, post-processed
+        in the js) to generate a series of numbers. Then I convert the lines in the
+        previous (data) step into numbers corresponding to the user's input words from
+        the front-end. Finally, I use these numbers as proxies for notes to play from
+        a chosen scale.
+      </p>
+
+      <p>
+        Hope you enjoy it. Feel free to fork. There's no hidden code in this app.
+      </p>
+
+      <p>
+        &amp;<br/>
+      </p>
+      
+      <p>
+        PS 1. In case you haven't noticed it, each song is of a fixed length. A new song
+        begins as soon as the previous one ends, <i>ad infinitum</i><br/>
+        PS 2. You can't save anything. Just hit refresh to restart.<br/>
+        PS 3. You aint heard nuttin til youve heard the drunken monk say less, same,
+        more or most of the golden lotus.<br/>
+      </p>
+      
+    </div></div> <!-- ss_help_panel -->
+
+  </body>
+  <script src="starsongs.js"></script>
+</html>
+  
