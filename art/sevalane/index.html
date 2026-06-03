@@ -1,0 +1,80 @@
+<html>
+  <meta charset="utf-8"/>
+  
+  <head>
+    <link rel="stylesheet" href="jiggle.css">
+    <link rel="stylesheet" href="sevalane.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class=title>பாடல்: சேவலனே நலம்காவலனே</div>
+    <div class=subtitle>ராகம்: காவடிச்சிந்து தாளம்: திஸ்ர கதி </div>
+
+    <div class=songtitle>
+      இசையின் உடைமையாளர்: <a href="https://www.youtube.com/watch?v=Nm1qBoBHzbA">வித்துவான் ஜெயந்தி குமரேஷ்</a>
+    </div>
+
+    <div style="text-align:center;">
+      <button id=btn onclick="start()">Click to start</button>
+    </div>
+
+    <div id=main>
+      <!-- om1 0:10 -->
+      <span id=p0 class=hidden>ஓம் முருகா ஓம் ஓம் முருகா</span> <br>
+      <span id=p1 class=hidden>ஓம் முருகா ஓம் ஓம் முருகா</span> <br>
+      <span id=p2 class=hidden>ஓம் முருகா ஓம் ஓம் முருகா</span> <br>
+      <span id=p3 class=hidden>ஓம் முருகா ஓம் ஓம் முருகா</span> <p>
+
+      <!-- 0:23 (sevalan) -->
+      <span id=p4 class=hidden>சேவலனே</span>             <span id=p5 class=hidden>நலம்காவலனே</span>   <br>
+      <span id=p6 class=hidden>செந்தில் வேலவனே</span>      <span id=p7 class=hidden>தலைப்பாவலனே</span>  <p>
+
+      <span id=p8 class=hidden>தேவரின் சேனையை</span>      <span id=p9 class=hidden>காத்தவனே</span> <br>
+      <span id=p10 class=hidden>உன்பேரினை என்றுமே</span>    <span id=p11 class=hidden>நான் மறவேன்</span> <p>
+
+      <!-- om2 0:51 -->
+      <span id=p12 class=hidden>ஓம் முருகா ஓம் ஓம் முருகா</span> <br>
+      <span id=p13 class=hidden>ஓம் முருகா ஓம் ஓம் முருகா</span> <br>
+      <span id=p14 class=hidden>ஓம் முருகா ஓம் ஓம் முருகா</span> <br>
+      <span id=p15 class=hidden>ஓம் முருகா ஓம் ஓம் முருகா</span> <p>
+
+      <!-- 1:11 eesan -->
+      <span id=p16 class=hidden> ஈசனை சீடனாய் </span>      <span id=p17 class=hidden> கொண்டவனே</span> <br>
+      <span id=p18 class=hidden> திருஞானத்தை கற்றுத் </span>  <span id=p19 class=hidden> தருபவனே</span> <p>
+
+      <span id=p20 class=hidden>சம்சாரத்தின் சோதனை</span>   <span id=p21 class=hidden> தீர்ப்பவனே</span> <br>
+      <span id=p22 class=hidden>வீண்மாயையின்</span>         <span id=p23 class=hidden>வலையறுப்பவனே</span> <p>
+
+      <span id=p24 class=hidden>ஓம் முருகா ஓம் ஓம் முருகா </span> <br>
+      <span id=p25 class=hidden>ஓம் முருகா ஓம் ஓம் முருகா </span> <br>
+      <span id=p26 class=hidden>ஓம் முருகா ஓம் ஓம் முருகா </span> <br>
+      <span id=p27 class=hidden>ஓம் முருகா ஓம் ஓம் முருகா </span> <p>
+
+      <!-- 2:27 kuzhal -->
+      <span id=p28 class=hidden> குழலோசையிலே </span>       <span id=p29 class=hidden>வரும் நாதத்திலே</span> <br>
+      <span id=p30 class=hidden>உயிர்நாடியைப் போல்</span>     <span id=p31 class=hidden>உருவானவனே</span> <p>
+
+      <span id=p32 class=hidden>உன்காலிசையில் மயில்</span>   <span id=p33 class=hidden> கூச்சலிட்டே</span> <br>
+      <span id=p34 class=hidden>வந்தாடித் திருப்புகழ்</span>     <span id=p35 class=hidden> பாடிடுமே</span> <p>
+
+       <!-- 3:53 Paaril -->
+       <span id=p36 class=hidden>பாரில் சிறந்த செம்</span>       <span id=p37 class=hidden>மாளிகைகள் கொண்டும்</span> <br>
+       <span id=p38 class=hidden> குன்றினிலாட்சி </span>        <span id=p39 class=hidden> அமைத்தவனே</span> <p>
+
+       <span id=p40 class=hidden>நாடெங்கும் ஊரெங்கும்</span>   <span id=p41 class=hidden>கோயில் கொண்டாயினும்</span> <br>
+       <span id=p42 class=hidden>பக்தன் மனதில்</span>         <span id=p43 class=hidden>முன் நிற்பவனே</span> <p>
+
+       <!-- 3:25 Om4 -->
+      <span id=p44 class=hidden>ஓம் முருகா ஓம் ஓம்     ஓம் முருகா (x8) </span>  <p>
+
+       <!-- 3:53 fin -->
+       <span id=p45 class=hidden>சேவலனே</span>             <span id=p46 class=hidden>நலம்காவலனே</span> <br>
+       <span id=p47 class=hidden>உன்பேரினை என்றுமே</span>      <span id=p48 class=hidden>நான் மறவேன்</span> <p>
+
+      <span id=p49 class=hidden>ஓம் முருகா ஓம் ஓம்     ஓம் முருகா </span>  <p>
+    </div>
+
+    <script src=sevalane.js></script>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300&display=swap');
+
+.hidden {
+    opacity:0;
+}
+
+body {
+    font-family:Arima Madurai, Helvetica Neue, Arial, Sans, cursive;
+    background-color:black;
+    background-size:cover;
+
+    font-size:18px;
+}
+
+a {
+    text-decoration: none;
+    color: #999;
+}
+
+.title {
+    text-align:center;
+    color: #b12;
+    font-size: 175%;
+    padding-top: 50px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.subtitle {
+    text-align:center;
+    color:#abe;
+    font-size:90%;
+    margin-bottom: 3px;
+    display: block;
+}
+
+.songtitle{
+    text-align:center;
+    font-size: 150%;
+
+    color:#cea;
+    margin: 5px;
+    display: block;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 110%;
+    display: block;
+}
+
+#main {
+    margin:auto;
+    width: 700px;
+    height: 500px;
+    overflow:auto;
+    text-align:center;
+    color:#ffa;
+    opacity: .6;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.heading {
+    margin-top: 20px;
+    font-size: 120%;
+}
+
+/* The following is only used in the root index.html */
+
+.lesson-link {
+    text-align:center;
+}
+.lesson-link a {
+    color: #38a;
+}
+.lesson-link a:hover {
+    animation: rainbow 5s infinite;
+}
+
+/* Start */
+
+#pottu {
+    color: #e34324;
+    font-size: 32px;
+    text-shadow: 5px 5px 5px gray;
+    text-align:center; 
+    opacity:0.5;
+    transition: 1s;
+}
+
+#pottu:hover {
+    animation: rainbow 5s infinite;
+    font-size: 34px;
+    text-shadow: 0px 0px 10px;
+    transition: 1s;
+    cursor:pointer;
+}
+
+/* Jiggle */
+
+@keyframes jiggle_anim {
+  0% { transform: translate(1px, 1px) rotate(0deg);}
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.jiggle {
+  animation: jiggle_anim 0.5s; 
+  animation-iteration-count: infinite;
+}
+
+/* rainbow from codepen.ip, beben-koben */
+
+@keyframes rainbow {
+     0%  {color: #ff0000;}
+    10%  {color: #ff8000;}
+    20%  {color: #ffff00;}
+    30%  {color: #f0ff00;}
+    40%  {color: #00ff00;}
+    50%  {color: #00ff80;}
+    60%  {color: #00ffff;}
+    70%  {color: #0080ff;}
+    80%  {color: #0000ff;}
+    90%  {color: #8000ff;}
+    100% {color: #ff0080;}
+}
+

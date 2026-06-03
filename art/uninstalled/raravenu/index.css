@@ -1,0 +1,90 @@
+.hidden {
+    opacity:0;
+    margin-top: 9px;
+}
+
+body {
+    font-family:Helvetica Neue, Arial, Sans;
+    background-image:url('raravenu.jpg');
+    background-size:cover;
+}
+
+a {
+    text-decoration: none;
+    color: darkcyan;
+}
+
+.title {
+    text-align:center;
+    color: #00ffdd; 
+    font-size: 150%;
+    padding-top: 50px;
+    margin-bottom: 10px;
+    text-shadow: 5px 5px 10px white;
+
+}
+
+.subtitle {
+    text-align:center;
+    color:lightblue;
+    font-size: 90%;
+    margin-bottom: 30px;
+}
+
+.titlenote{
+    text-align:center;
+    font-size:75%;
+    color:lightblue;
+    margin: 5px;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+#main {
+    z-index:2;
+    margin:auto;
+    width: 900px;
+    height: 300px;
+    overflow:auto;
+    text-align:center;
+    color:#00C8FF;
+    font-size: 18px;
+}
+
+.svara {
+    color:teal;
+}
+
+.line {
+    margin: auto;
+    display: block;
+    border: 1px solid cyan;
+}
+
+#btn {
+    color:cyan;
+    background-color: rgba(0, 139, 139, 0.5);
+    border-radius:40px;
+    cursor:pointer;
+    opacity: 0.8;
+
+    font-family: Helvetica Neue,Helvetica,Sans;
+    font-size: 32px;
+    margin: 20px;
+    transition: all 0.5s;
+}
+#btn:hover {
+    background-color: orange;
+    font-weight:bold;
+    color: darkred;
+    transition: all 0.5s;
+}
+
+.btn-clicked {
+    disabled:true;
+    opacity: 0.1;
+    transition: opacity 1s ease;
+}
+

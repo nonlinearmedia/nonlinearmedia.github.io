@@ -1,0 +1,76 @@
+.hidden {
+    opacity:0;
+    margin-top: 9px;
+}
+
+body {
+    background-color:black;
+    background-image:url('meera-mayon.1.jpg');
+    background-size:cover;
+}
+
+.title {
+    font-family:Helvetica Neue, Arial, Sans;
+    text-align:center;
+    color: 00D8FF; 
+    font-size: 150%;
+    padding-top: 100px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-family:Helvetica Neue Light, Arial, Sans;
+    text-align:center;
+    color:#888;
+    font-size: 90%;
+    margin-bottom: 30px;
+}
+
+.songtitle{
+    text-align:center;
+    font-size:110%;
+    color:#444;
+    margin: 5px;
+}
+
+h1 {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+table {
+    margin-left:auto;
+    margin-right:auto;
+    width:900px;
+    margin:auto;
+    font-size:25px;
+    color:00D8FF;
+}
+
+#main {
+    margin:auto;
+    width: 1000px;
+    height: 400px;
+    overflow:auto;
+    text-align:center;
+}
+
+#btn {
+    width: 210px;
+    height: 50px;
+    color: teal;
+    background: #222;
+    border-radius:10px;
+    z-index: 100;
+    
+    font-size: 24px;
+    font-family: Helvetica Neue Light,Helvetica,Sans;
+    margin: 20px;
+}
+
+.btn-clicked {
+    disabled:true;
+    opacity: 0.1;
+    transition: opacity 1s ease;
+}
+

@@ -1,0 +1,236 @@
+<html>
+  <meta charset="utf-8"/>
+  
+  <head>
+    <link rel="stylesheet" href="jiggle.css">
+    <link rel="stylesheet" href="mm.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class=title>மீராவின் மாயோன் - திரைக்கதையிலிருந்து ஒரு காட்சி/பாடல்</div>
+    <div class=subtitle>Loosely based on The Phantom Of The Opera</div>
+
+    <div class=songtitle>
+      பாடல்: மணிமகுடமயில்வண்ணா<br/>
+      இசையின் உடைமையாளர்: ஆண்டிரு லாயட் வெப்பர் (1986)
+    </div>
+
+    <div style="text-align:center;">
+      <button id=btn onclick="start()">Click to start</button>
+    </div>
+
+    <div id=main>
+      <table>
+        <tr>
+          <td colspan=3> <!-- row 1 left -->
+            <div><div class="hidden p0"><h1>(மீரா)</h1></div></div>
+            <div><div class="hidden p0">என் நித்திரையின் சுவை தந்தான்</div></div>
+            <div><div class="hidden p1">நல்சொப்பனத் திறையாண்டான்</div></div>
+            <div><div class="hidden p2">சித்தமெலாமென் பெயரினைப்போல்</div></div>
+            <div><div class="hidden p3">பக்தையெனை வர்ணித்தான்</div></div>
+            <div><div class="hidden p3"><br/></div></div>
+            <div><div class="hidden p4">கனவுலகை நாடினேன்</div></div>
+            <div><div class="hidden p5">அதனுடைய நாதனே</div></div>
+            <div><div class="hidden p6">கண்ணா - மணிமகுடமயில்வண்ணா</div></div>
+            <div><div class="hidden p7">மணாளனே</div></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan=3 style="text-align:right;"> <!-- row 2 right -->
+            <div><div class="hidden p8"><h1>(பகவான்)</h1></div></div>
+            <div><div class="hidden p8">உன் பாடலோர் இனிபானமே</div></div>
+            <div><div class="hidden p9">மதுபோதைபோல் கண்சொக்குமே</div></div>
+            <div><div class="hidden p10">பாமாலையும் என்மாமாயையும்</div></div>
+            <div><div class="hidden p11">பாரெங்குமே பறந்தோங்குமே</div></div>
+            <div><div class="hidden p11"><br/></div></div>
+            <div><div class="hidden p12">என்னை காணாத வேளையில்</div></div>
+            <div><div class="hidden p13">நீ வீணாய் திரும்பியும்</div></div>
+            <div><div class="hidden p14">கண்ணே, இனிரசகனியமுதே</div></div>
+            <div><div class="hidden p15">கைவிடமாட்டேன்</div></div>
+            <div><div class="hidden p15"><br/></div></div>
+          </td>
+        </tr>
+        
+
+        <tr>
+          <td colspan=3> <!-- 3, 1 -->
+            <div><div class="hidden p16"><h1>(மீரா)</h1></div></div>
+            <div><div class="hidden p16">பார்தனே பயம்கொண்டுனை</div></div>
+            <div><div class="hidden p17">பிரார்த்தனைசெய்நேர்ந்ததே</div></div>
+            <div><div class="hidden p18">உன் வாக்கினை என் வார்த்தையே...</div></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan=3 style="text-align:right;"> <!-- 4,3 -->
+            <div><div class="hidden p19"><h1>(பகவான்)</h1></div></div>
+            <div><div class="hidden p19">ஒரு வாகனம்போல் எனைத்தாங்குமே</div></div>
+            <div><div class="hidden p19"><br/></div></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan=3 style="text-align:center;"> <!-- 5,2 -->
+            <div><div class="hidden p20"><h1>(சேர்ந்து)</h1></div></div>
+            <div><div class="hidden p20">ஆசையும் குழலோசையும்</div></div>
+            <div><div class="hidden p21">சுருதிசேருமே</div></div>
+            <div><div class="hidden p21"><br/></div></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td> <!-- 6,1 -->
+            <div><div class="hidden p22"><h1>(மீரா)</h1></div></div>
+            <div><div class="hidden p22">கண்ணா - யதுகுலமுரளீதரா</div></div>
+            <div><div class="hidden p23">மனோகரா</div></div>
+            <div><div class="hidden p23"><br/></div></div>
+          </td>
+          <td></td> <!-- 6,2 -->
+          <td style="text-align:right;"> <!-- 6,3 -->
+            <div><div class="hidden p22"><h1>(பகவான்)</h1></div></div>
+            <div><div class="hidden p22">கண்ணே, புதுமலர்முகமனமே</div></div>
+            <div><div class="hidden p23">பேரின்பமே</div></div>
+            <div><div class="hidden p23"><br/></div></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan=3 style="text-align:center;">  <!-- 7,2 -->
+            <div><div class="hidden p24"><h1>(கூட்டம்)</h1></div></div>
+            <div><div class="hidden p24">கண்ணா… மணிமகுடமயில்வண்ணா...</div></div>
+            <div><div class="hidden p25">கண்ணா… மணிமகுடமுகில்வண்ணா...</div></div>
+            <div><div class="hidden p25"><br/></div></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan=3 style="text-align:right;"><!-- 8,3 -->
+            <div><div class="hidden p26"><h1>(பகவான்)</h1></div></div>
+            <div><div class="hidden p26">வனமாளும் சந்திரனும்</div></div>
+            <div><div class="hidden p27">மனமாளும் இந்திரனும்</div></div>
+            <div><div class="hidden p28">எனதென்று நம்புவார்</div></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan=3><!-- 9,1 -->
+            <div><div class="hidden p29"><h1>(மீரா)</h1></div></div>
+            <div><div class="hidden p29">உனதன்பை நாடினேன்</div></div>
+            <div><div class="hidden p29"><br/></div></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><!-- 10,1 -->
+            <div><div class="hidden p30"><h1>(மீரா)</h1></div></div>
+            <div><div class="hidden p30">இருள்சூழும் பாதையில்</div></div>
+            <div><div class="hidden p31">அருள் தேடும் கண்களின்</div></div>
+            <div><div class="hidden p32">கண்ணா - கமலஜனார்தனா</div></div>
+            <div><div class="hidden p33">புருஷோத்தமா</div></div>
+          </td>
+          <td><!-- 10,2 --></td>
+          <td style="text-align:right;"><!-- 10,3 -->
+            <div><div class="hidden p30"><h1>(பகவான்)</h1></div></div>
+            <div><div class="hidden p30">இருள்சூழும் பாதையில</div></div>
+            <div><div class="hidden p31">அருள் தேடும் கண்களின்</div></div>
+            <div><div class="hidden p32">கண்ணே, அறுசுவைநவரசமே</div></div>
+            <div><div class="hidden p33">உன்பாடலே</div></div>
+            <div><div class="hidden p33"><br/></div></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><!-- 11,1 --></td>
+          <td><!-- 11,2 --></td>
+          <td style="text-align:right;"><!-- 11,3 -->
+            <div><div class="hidden p34"><h1>(பகவான்)</h1></div></div>
+            <div><div class="hidden p34">பாடு. குயிலே, உனக்காக பாடு</div></div>
+            <div><div class="hidden p34"><br/></div></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan=3><!-- 12,1 -->
+            <div><div class="hidden p35"><h1>(மீரா)</h1></div></div>
+            <div><div class="hidden p35">கண்ணா, பரமாத்மகீத நாயகா</div></div>
+            <div><div class="hidden p36">கண்ணா</div></div>
+            <div><div class="hidden p36"><br/></div></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><!-- 13,1 -->
+            <div><div class="hidden p37"><h1>(மீரா)</h1></div></div>
+            <div><div class="hidden p37">கண்ணா</div></div>
+            <div><div class="hidden p37"><br/></div></div>
+          <td><!-- 13,2 --></td>
+          <td style="text-align:right;"><!-- 13,3 -->
+            <div><div class="hidden p38"><h1>(பகவான்)</h1></div></div>
+            <div><div class="hidden p38">பாடு</div></div>
+            <div><div class="hidden p38"><br/></div></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><!-- 14,1 -->
+            <div><div class="hidden p39"><h1>(மீரா)</h1></div></div>
+            <div><div class="hidden p39">கண்ணா</div></div>
+            <div><div class="hidden p39"><br/></div></div>
+          </td>
+          <td><!-- 14,2 --></td>
+          <td style="text-align:right;"><!-- 14,3 -->
+            <div><div class="hidden p40"><h1>(சற்று முன் நுழைந்த ராணா)</h1></div></div>
+            <div><div class="hidden p40">எனக்காக பாடு.</div></div>
+            <div><div class="hidden p40"><br/></div></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan=3><!-- 15,1 -->
+            <div><div class="hidden p41"><h1>(மீரா)</h1></div></div>
+            <div><div class="hidden p41">கண்ணா</div></div>
+            <div><div class="hidden p41"><br/></div></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan=3 style="text-align:right;"><!-- 16,3, -->
+            <div><div class="hidden p42"><h1>(பகவான்)</h1></div></div>
+            <div><div class="hidden p42">குயிலே, உனக்காக பாடு</div></div>
+            <div><div class="hidden p42"><br/></div></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan=3><!-- 18,1 -->
+            <div><div class="hidden p43"><h1>(மீரா)</h1></div></div>
+            <div><div class="hidden p43">கண்ணா</div></div>
+            <div><div class="hidden p44">கண்ணா</div></div>
+            <div><div class="hidden p45">கண்ணா</div></div>
+            <div><div class="hidden p45"><br/></div></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan=3 style="text-align:right;"><!-- 19,3 -->
+            <div><div class="hidden p46"><h1>(ராணா)</h1></div></div>
+            <div><div class="hidden p46">எனக்காக பாடு</div></div>
+            <div><div class="hidden p46"><br/></div></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan=3><!-- 20,1 -->
+            <div><div class="hidden p47"><h1>(மீரா)</h1></div></div>
+            <div><div class="hidden p47">கண்ணா</div></div>
+            <div><div class="hidden p47"><br/></div></div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <script src=mm.js></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+Note: Fetching the whole thing failed due to some weirdly named
+invisible file being not found on S3.  After aa was fetched
+(apparently successfully), it failed on madhuram.
+
+Thus, separate fetches for the subdirs (while ignoring robert
+chapman's zprints) using the scripts in .fetch-scripts.
+
+I also deleted all the massive mp4 files in aa/* under S3 - uploaded
+to youtube and replaced href in index.html's
+
+the mp4 dir contains all the .mp4 files subsequently uploaded to yt
+(and deleted here if not present)

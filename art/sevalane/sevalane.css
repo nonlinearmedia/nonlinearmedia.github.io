@@ -1,0 +1,76 @@
+.hidden {
+    opacity:0;
+    margin-top: 9px;
+}
+
+body {
+    font-family:Helvetica Neue, Arial, Sans;
+    background-color:black;
+    background-image:url('murugan-batu.jpg');
+    background-size:cover;
+}
+
+a {
+    text-decoration: none;
+    color: #999;
+}
+
+.title {
+    text-align:center;
+    color: orange; 
+    font-size: 250%;
+    padding-top: 50px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align:center;
+    color:#888;
+    font-size: 90%;
+    margin-bottom: 30px;
+}
+
+.songtitle{
+    text-align:center;
+    font-size:110%;
+    color:#888;
+    margin: 5px;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+#main {
+    margin:auto;
+    width: 900px;
+    height: 300px;
+    overflow:auto;
+    text-align:center;
+    color:red;
+    font-size: 24px;
+}
+
+.line {
+    margin: auto;
+    display: block;
+    border: 1px solid blue;
+}
+
+#btn {
+    width: 120px;
+    height: 30px;
+    color:darkred;
+    background: #f4c430;
+    border-radius:10px;
+    
+    font-family: Helvetica Neue Light,Helvetica,Sans;
+    margin: 20px;
+}
+
+.btn-clicked {
+    disabled:true;
+    opacity: 0.1;
+    transition: opacity 1s ease;
+}
+
