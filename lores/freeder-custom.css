@@ -1,6 +1,6 @@
 body {
     font-family: 'Special Elite','Quicksand', sans-serif;
-    background-image: url('https://lores.nonlinearmedia.org/img/starsky.jpg');
+    background-image: url('img/starsky.jpg');
     font-size: 12px;
     position: relative;
     scroll-behavior: smooth;
@@ -140,7 +140,7 @@ body {
     border: 1px solid #888;
     border-radius: 10px;
 
-    background: url('https://lores.nonlinearmedia.org/img/blue-tissue.jpg');
+    background: url('img/blue-tissue.jpg');
     opacity: 0.95;
     overflow:auto;
     
