@@ -1,0 +1,77 @@
+<html>
+ <head>
+  <title>Questing Lores</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="freeder-custom.css" rel="stylesheet" type="text/css" />
+ </head>
+
+ <body style="background-image: url('img/space-red.jpg');">
+  <div id="tr-curtain" style="text-align:center;">
+    <div id="tr-curtain-graphic" style="margin:auto;">
+      <img id="tr-curtain-nebula" src="img/spiral-nebula.png">
+    </div>
+  </div>
+
+  <!-- The following two outer divs are absolutely positioned on the page. Treat them as modals.
+       Their visibility is controlled programmatically. They can be brought into life by unhiding
+       (e.g. fadeIn). They will dismiss themselves when the user clicks the X. In addition, some
+       other events on a div (e.g. clicking on a voice name) can also dismiss the div.
+
+       When the dialogue icon is clicked tr_set_voices() is called. It will detect speakers in the
+       currently showing script and populate a table with speakers and voice. This
+       table is shown in the div tr-your-voice-actors-panel
+       -->
+  <div id="tr-your-voice-actors-panel" class="tr-panel">
+    <div class="tr-panel-x" onclick="$('#tr-your-voice-actors-panel').fadeOut()">
+      <img class="tr-live-button" src="img/red-x.png">
+    </div>
+    <h1>Your Voice Actors</h1>
+    <div id="tr-your-voice-actors-table"></div>
+  </div>
+
+  <!-- When a voice in the above panel is clicked, the following panel is unhidden. It presents
+       a selection of Polly voices whose click callbacks are tied to update the voice name 
+       that was clicked on
+   -->
+  <div id="tr-select-voice-for-speaker-panel" class="tr-panel">
+    <div class="tr-panel-x" onclick="$('#tr-select-voice-for-speaker-panel').fadeOut()">
+      <img class="tr-live-button" src="img/red-x.png">
+    </div>
+    <h1>Select Actor for <span id="tr-speaker-name">Anon</span></h1>
+    <ul><ul> <!-- Filled by js -->
+  </div>
+
+</div>
+
+  <!---------------------------------------------------------------------->
+  <img id="tr-home-button"    class="tr-live-button" src="img/home.png">
+  <img id="tr-pause-button"   class="tr-live-button" src="img/pause.png">
+  <img id="tr-play-button"    class="tr-live-button" src="img/speaker.png">
+
+  <div id="tr-title" class="tr-title"></div>
+  <div id="tr-subtitle" class="tr-subtitle">create your own script</div>
+
+  <div id="tr-lore-container">
+    <div id="tr-lore"></div>
+  </div>
+  <!---------------------------------------------------------------------->
+
+  <div class="tr-center-text-div">
+   <img id="tr-toggle-lines-button" class="tr-live-button" src="img/red-x.png">
+   <br/>
+   <img id="tr-set-voices-button" class="tr-live-button" src="img/dialogue.png">
+   <br/>
+   <a id="tr-permalink" class="tr-permalink" target="Bookmark me"></a>
+  </div>
+
+  <!-- The script only needs the tr-buttons, #tr-lore-container and #tr-lore.
+    Change just about anything else on this page.
+    -->
+  <script>LORE_EDITABLE = true</script>
+  <script src="freeder.js"></script>
+
+ </body>
+</html> 
+            

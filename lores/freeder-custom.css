@@ -1,0 +1,292 @@
+body {
+    font-family: 'Special Elite','Quicksand', sans-serif;
+    background-image: url('https://lores.nonlinearmedia.org/img/starsky.jpg');
+    font-size: 12px;
+    position: relative;
+    scroll-behavior: smooth;
+    transition: background 1.5s linear;
+}
+
+#tr-curtain {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    opacity: 0.98;
+    z-index: 10;
+}
+ 
+#tr-title {
+    margin-top: 20px;
+    font-weight:normal;
+    text-align:center;
+    font-size: 36px;
+    color:#888;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+#tr-subtitle {
+    font-weight:normal;
+    text-align:center;
+    font-size: 14px;
+    color: white;
+    padding-bottom: 20px;
+    text-shadow: 0px 0px 10px #ffffff;
+}
+
+#tr-home-button {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+
+    width:30px;
+}
+
+#tr-play-button {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+
+    display:none;
+}
+
+#tr-pause-button {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+
+    display:none;
+}
+
+#tr-set-voices-button {
+    display:none;
+    margin:auto;
+}
+
+.tr-live-button {
+    transition: 1s ease-in-out;
+    opacity: .5;
+}
+.tr-live-button:hover {
+    cursor:pointer;
+    transition: 500ms ease-in-out;
+    opacity:1;
+}
+
+#tr-lore-container {
+    height: 500px;
+    overflow: auto;
+    margin: 10px auto 10px auto;
+    padding: 20px 10px 10px 10px;
+    position: relative;
+    opacity: 0.8;
+
+    text-align: center;
+}
+
+/* Contains the lines to be spoken in boxes of type .tr-message */
+#tr-lore {
+    width: 1000px;
+    margin: auto;
+    color: white;
+}
+
+.tr-message {
+    text-align:left;
+    margin: 15px 5px 15px 5px;
+    width: 900px;
+    padding: 15px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: white;
+    color: #666;
+    transition: 500ms;
+    text-shadow: 0px 0px 0px black;
+    resize: none;
+
+    font-family: 'Special Elite','Quicksand', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    float: center;
+}
+
+.tr-message.tr-current {
+    color: blue;
+    text-shadow: 0px 0px 2px black;
+    transition: 250ms;
+}
+
+/* Generic stuff and (sometimes interactive) panels
+ */
+.tr-center-text-div {
+    min-height:32px;
+    width:100%;
+    text-align:center;
+}
+
+.tr-panel {
+    position: fixed;
+    top: 150px;
+    left: 25%;
+
+    width: 500px;
+    max-height: 400px;
+    padding: 15px;
+
+    border: 1px solid #888;
+    border-radius: 10px;
+
+    background: url('https://lores.nonlinearmedia.org/img/blue-tissue.jpg');
+    opacity: 0.95;
+    overflow:auto;
+    
+    display:none;
+}
+
+/* X button, top right, tied to self.fadeout()
+ */
+.tr-panel-x {
+    position: relative;
+    top: 0px;
+    float:right;
+
+    font-size: 14px;
+    color:red;
+    text-shadow: 0px 0px 2px black;
+    cursor:pointer;
+}
+
+.tr-panel h1 {
+    margin: 10px;
+    font-size: 24px;
+    color: darkblue;
+    text-shadow: 0px 0px 5px black;
+}
+
+.tr-panel li {
+    font-size: 22px;
+    cursor: pointer;
+    padding: 5px;
+    transition: 0.25s;
+}
+.tr-panel li:hover {
+    transition: 0.25s;
+    color:red;
+    text-shadow: 0px 0px 2px black;
+}
+
+/* ---- Until the next divider = stuff to do with the editor (not nec in reader) ----- */
+
+/* This is the part in which a voice is being changed. Generic panel menu. Nothing further needed. */
+
+#tr-select-voice-for-speaker-panel {
+    display: none;
+    z-index: 5;
+}
+
+/* This is the panel in which the current voice cast is shown. It's a table. Best left alone for now. */
+
+#tr-your-voice-actors-panel {
+    display:none;
+    text-align:center;
+    z-index: 4;
+}
+
+#tr-voices-table {
+    margin:auto;
+}
+
+.tr-voices-table-speaker {
+    padding: 10px 10px 10px 10px;
+}
+
+.tr-voices-table-voice {
+    padding: 10px 10px 10px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+.tr-voices-table-voice:hover {
+    color:red;
+    text-shadow: 0px 0px 2px black;
+    transition: 0.25s;
+}
+
+#tr-voices-table tr {
+    margin:auto;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.tr-permalink {
+    margin:auto;
+    padding-top: 10px;
+    font-size:10px;
+    cursor: pointer;
+
+    font-family:"Courier";
+    font-size:12px;
+
+    color: #8888ff;
+    text-align:center;
+    opacity: 0.5;
+    transition: 0.25s;
+}
+.tr-permalink:hover {
+    font-weight: bold;
+    opacity: 1.0;
+    transition: 0.25s;
+}
+
+/* This is the part in lore continuations are shown */
+
+#tr-lore-continuation-panel {
+    width: 500px;
+    opacity: 0.95;
+    display:none;
+}
+
+#tr-lore-continuation-panel ul {
+    max-height: 100px;
+    margin: 0px 0px 10px 20px;
+    overflow:auto;
+    list-style: none;
+    padding: 0px 0px 10px 10px;
+}
+
+#tr-lore-continuation-panel .tr-subheading {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #444;
+}
+
+#tr-lore-continuation-panel li {
+    font-size: 20px;
+}
+
+#tr-lore-continuation-panel a {
+    cursor:pointer;
+    text-shadow: -2px -1px 1px white;
+    text-decoration: none;
+    transition: 0.25s;
+    color: darkblue;
+}
+#tr-lore-continuation-panel a:hover {
+    color:red;
+    text-shadow: 2px 1px 1px black;
+    transition: 0.25s;
+}
+
+@keyframes tr-img-spin {
+  0% {
+      transform: rotate(0deg) scale(1);
+  }
+  100% {
+      transform: rotate(-360deg) scale(50);
+  }
+}

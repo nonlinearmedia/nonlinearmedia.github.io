@@ -1,0 +1,42 @@
+<html>
+ <head>
+  <title>Questing Lores</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="freeder-custom.css" rel="stylesheet" type="text/css" />
+ </head>
+
+ <body>
+  <div id="tr-curtain" style="text-align:center;">
+    <div id="tr-curtain-graphic" style="margin:auto;">
+      <img id="tr-curtain-nebula" src="img/spiral-nebula.png">
+    </div>
+  </div>
+
+  <!---------------------------------------------------------------------->
+  <img id="tr-home-button"    class="tr-live-button" src="img/home.png">
+  <img id="tr-pause-button"   class="tr-live-button" src="img/pause.png">
+  <img id="tr-play-button"    class="tr-live-button" src="img/speaker.png">
+
+  <div id="tr-title" class="tr-title"></div>
+  <div id="tr-subtitle" class="tr-subtitle"></div>
+
+  <div id="tr-lore-container">
+    <div id="tr-lore"></div>
+  </div>
+  <!---------------------------------------------------------------------->
+
+  <!-- Will be filled dynamically -->
+  <div id="tr-lore-continuation-panel" class="tr-panel">
+  </div>
+
+  <!-- The script only needs the tr-buttons, #tr-lore-container and #tr-lore.
+    Change just about anything else on this page.
+    -->
+  <script>LORE_EDITABLE = false</script>
+  <script src="freeder.js"></script>
+
+ </body>
+</html> 
+            
