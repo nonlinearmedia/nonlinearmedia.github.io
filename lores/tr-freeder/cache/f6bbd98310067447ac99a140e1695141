@@ -1,0 +1,1 @@
+{"in": {"title": "Questing Lores", "subtitle": "<span id=\"tr_lore_id\">a blank slate is the best slate</span>", "lines": ["Hello World!"], "speaker_map": {"NARRATOR": "Joanna", "Hello World!": "Joanna"}}, "out": {"cache_id": "f6bbd98310067447ac99a140e1695141", "audio_objects": [["76b134177fef22d6ea94e0ba46f6870b-hello-world-", 0]]}}
