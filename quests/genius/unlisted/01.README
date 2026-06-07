@@ -1,0 +1,7 @@
+Jul 22 2023:
+echo 1. /var/www/quests.nonlinearmedia.org/subs/scores/genius/waitlist.tsv | md5sum
+
+Init:
+[ec2-user@ip-10-0-0-180 unlisted]$ echo /var/www/quests.nonlinearmedia.org/subs/scores/genius/waitlist.tsv | md5sum
+b102c3297c5fe1cf578cd34d09254d92  -
+

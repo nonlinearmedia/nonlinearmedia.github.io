@@ -1,0 +1,7 @@
+Before thinking about renaming tr_get_lore.php:
+
+Dependency: It is used by the questing site to check if a lore by name exists
+Actual Loreing is by cache ID, so this is the only place where a lore name
+is used to get to it now.
+
+

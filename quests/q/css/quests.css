@@ -1,0 +1,115 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#container {
+  width: 900px;
+  height: 300px;
+  margin: auto;
+  text-align: center;
+  padding: 100px;
+}
+
+#cs_box {
+  width: 700px;
+  height: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  
+  border: 1px solid darkgray;
+  border-radius:15px; 
+
+  padding: 20px 20px 20px 20px;
+}
+
+h1 {
+  color: darkred;
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.6em;
+  color: purple;
+}
+
+#ctrDiv {
+  margin:auto;
+  color:white;
+  font-size: 1.5em;
+}
+
+#idbox {
+  font-size: 1.5em;  
+  text-align:center;
+  color: blue;
+  border-radius:2px;
+  background-color:aliceblue;
+}
+
+#instr {
+  font-size: 0.9em;
+  opacity:0.25;
+}
+
+#quests_div {
+    top: 25px;
+    margin: auto;
+}
+
+#quests_table_div {
+    width: 700px;
+    margin:auto;
+    padding-top: 50px;
+}
+
+#quests_table {
+   margin: auto;
+   text-align: center;
+   border: 1px solid #888;
+   border-radius: 2px;
+}
+#quests_table th {
+    padding: 10px 20px 10px 20px;
+}
+#quests_table td {
+    padding: 5px;
+    color: green;
+}
+#quests_table tr:nth-child(even) {
+    background-color: #d2e2f2
+}
+
+#quests_total_trophies {
+    font-size: 80%;
+    color: gold;
+    text-shadow: 1px 1px 1px gray;
+}
+
+.quests_overlay_full {
+  width:900px;
+  height:700px;
+
+  margin-left:auto;
+  position: absolute;
+  padding-left: 5px;
+  padding-right: 5px;
+  top:0px;
+  z-index:2;
+
+  overflow:auto;
+  margin: auto;
+
+  opacity:0.98;
+  background: #f8f8f8;
+  border-radius:5px;
+  box-shadow: 10px 10px 25px black;
+  display:none;
+}
+
+.quests_overlay_x {
+  font-size: 25px;
+  text-decoration: none;
+  float:right;
+  color: red;
+}

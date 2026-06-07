@@ -1,0 +1,37 @@
+<html>
+ <head>
+  <link href="css/quests.css" rel="stylesheet" type="text/css" media="all">
+  <link href="css/gradient.css" rel="stylesheet" type="text/css" media="all">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+ </head>
+
+ <body id="gradient">
+
+  <div id="container">
+   <!-- will contain quests/scores and be faded/in out programmatically -->
+   <div id=quests_div class=quests_overlay_full>
+    <a class="quests_overlay_x" href="javascript:_quests_hide_quests_div();">&times;&nbsp;</a>
+    <div id=quests_table_div></div>
+   </div>
+
+   <div id="cs_box">
+    <h1>Nonlinear Questing</h1>
+    <h2>Check out your Questing Trophies</h2>
+
+    <div id="ctrDiv" border=0>
+      <p id=instr>
+        Type in your secret handle below and hit ENTER to see your loot<br>
+        <span style="font-size:75%;">(Remember: This scoreboard is wiped on the 1st of Jan, Apr, Jul, and Oct)</span>
+      </p>
+      <p><input id="idbox" type="text" size=16 onKeyUp="return _quests_on_key_up_id_box(event);"></input></p>
+    </div> <!-- ctrDiv -->
+   </div> <!-- cs_box -->
+  </div> <!-- container -->
+ </body>
+ <script src="js/gradient.js"></script>
+ <script src="js/quests.js"></script>
+
+</html>

@@ -1,0 +1,107 @@
+/* Styles for Foothill TreeWhiz
+ * &: Apr 2016 (Foothill College, Los Altos Hills, CA 94022)
+ */
+
+/* Styles common to most of my webapps -------------------------------------------------*/
+
+body {
+    margin-left:40px; margin-right:40px;
+    padding:0px 10px 0px 10px;
+    font-family:"Trebuchet MS",Sans-serif;
+    font-size:12px;
+}
+
+h1 {
+    color: red;
+    font-size:2em;
+    text-shadow: 3px 3px 3px gray;
+    -webkit-font-feature-settings: 'dlig' 1;
+}
+h2 {
+    color: red;
+    text-align:center;
+    -webkit-font-feature-settings: 'dlig' 1;
+}
+
+
+.centeredSmallDiv {
+    width: 600px;
+    margin:auto;
+    font-size:1.2em;
+}
+
+.codeSpan {
+    font-family:"Courier New","Courier";
+}
+
+.boxHeaderDiv {
+    text-align:center;font-family:"Trebuchet MS",Arial;
+    font-size: 1.1em;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#footerDiv {
+    padding:10px;
+    text-align:center;
+    color:#888;
+    font-size:10px;
+}
+
+/* TreeWhiz specific -------------------------------------------------------------------*/
+
+#_tw_treeContainerDiv {
+    border: 1px solid #ccc;
+    padding-top: 5px; padding-left:10px padding-right:10px;
+    font-size: 3em;
+    font-family:Cursive;
+    color: #2a2;
+    border-radius:10px;
+    width:800px;
+    min-height: 400px;
+    overflow: auto;
+    text-align:center;
+    resize:both;
+}
+#_tw_spanTooltip {
+    text-align:right;
+    width:100%;
+    font-size:0.8em;
+    color:blue;
+    cursor:help;
+}
+
+#_tw_inputArea {
+    min-width: 300px;
+    min-height: 600px;
+    display:block;
+    margin-top:5px;
+    padding: 10px 10px 10px 40px;
+    background-color: #ddffdd;
+    border-radius: 10px;
+    border: 0.5px dashed gray;
+    font-family:"Courier New","Courier";
+    font-size:0.9em;
+    overflow:auto;
+    resize:none;
+}
+
+/* D3 specific ----------------------------------------------------------------------*/
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node {
+  font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+              
+/* ---------------------------------------------------------------------------------*/

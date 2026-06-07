@@ -1,0 +1,38 @@
+<!--   &: Sep 2015 (Foothill College, Los Altos Hills, CA 94022) -->
+<html>
+  <head>
+   <title>Foothill Computer Science Department - 3-Pole Towers of Hanoi Solution</title>
+   <link href="css/hanoi.css" rel="stylesheet" type="text/css" />
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  </head>
+ 
+  <body onLoad="onBodyLoad();">
+     <div id=_hanoi_page_header>
+       <h1>3-Pole Towers of Hanoi </h1>
+       <p>On this page you can try out the recursive solution for the Towers of Hanoi problem.
+       You can right-click on the page and view the JavaScript source code, which follows the
+       same algorithm as you would code in Java or C++.</p>
+
+       <p>Type the number of discs (0-<span id=_hanoi_maxDiscs>32</span>) in the box below and hit
+       Enter. Or hit the I'm feeling lucky button.</p>
+
+       <span class=prompt>
+         Number of discs:
+       </span>
+       <input type='text' id='_hanoi_nDiscs' maxlength=3 size=5
+              onKeyUp="_HANOI_Controller.onRuleInputKeyUp(event);"/>
+
+       <br/><br/>
+       <button id=_hanoi_luckyButton
+               onClick="_HANOI_Controller.onClickLuckyButton();">I'm feeling lucky</button>
+     </div><br/>
+
+     <div id="_hanoi_container">
+     </div>
+
+  <script src="js/HanoiController.js"></script>
+  <script src="js/HanoiView.js"></script>
+  </body>
+</html>
+
