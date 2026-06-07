@@ -121,11 +121,12 @@ body.faded-in {
 }
 
 .menu-node a {
+    color: purple;
     text-decoration: none;
     padding: 10px 14px;
     transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
     display: inline-block;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), 0px 0px 8px rgba(128, 128, 128, 0.3);
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), 0px 0px 8px rgba(128, 128, 128, 0.9);
 }
 .menu-node a:hover {
     color: #FF0000;
