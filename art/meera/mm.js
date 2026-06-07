@@ -17,7 +17,7 @@ function advance() {
 function start() {
     $('#btn').fadeOut()
     
-    var a = new Audio('https://art.nonlinearmedia.org/meera/phantom.mp3')
+    var a = new Audio('phantom.mp3')
     a.addEventListener('playing', (event) => { setTimeout(advance, X[0]) })
     a.addEventListener('ended', (event) => { $('#main').fadeOut(); })
     a.play()
