@@ -1,13 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Redirecting</title>
-    <meta http-equiv="refresh" content="0; url=https://nonlinearmedia.github.io/art/">
-    <script type="text/javascript">
-        window.location.replace("https://nonlinearmedia.github.io/art/");
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nonlinear Media</title>
+    <!-- Thin Quicksand Font Configuration -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 300;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Using your requested background image */
+            background: url('img/quests-bg-25pct.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        #container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 50px 80px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .title {
+            color: purple;
+            text-shadow: 2px 2px 5px gray;
+            font-size: 42px;
+            margin-bottom: 40px;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 24px;
+            color: purple;
+            transition: 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: red;
+            text-shadow: 2px 2px 2px gray;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
+
+    <div id="container">
+        <div class="title">Nonlinear Media</div>
+        
+        <div class="links-container">
+            <!-- Option 1: Redirects to art/index.html -->
+            <a href="art/index.html">Art</a>
+            
+            <!-- Option 2: Links directly to your newly created GitHub Release -->
+            <a href="https://github.com/nonlinearmedia/nonlinearmedia.github.io/releases/tag/v1.0.0">Questing Server</a>
+        </div>
+    </div>
+
 </body>
 </html>
