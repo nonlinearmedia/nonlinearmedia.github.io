@@ -22,8 +22,10 @@ desktop.ini
 # Local log files and runtime dumps
 *.log
 .deprecated/
+.unused/
 .to-delete/
 .bak/
+.gitignore*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
