@@ -1,0 +1,40 @@
+body {
+ padding:10px; margin-left:40px; margin-right:40px; font-family:"Trebuchet MS",Arial;
+ border:1px solid gold; border-radius:15px; box-shadow: 10px 10px lightgray;
+}
+
+#_ca_container {
+ width: 1001px;
+ margin:auto;
+}
+
+button {
+ background-color: gold; font-family:"Trebuchet MS",Arial;font-size:14px;padding:4px; border-radius:4px;
+}
+
+button:disabled {
+ background-color: #aaa;
+}
+ 
+h1 {
+ color: red;
+ text-shadow: 3px 3px 3px gray;
+  -webkit-font-feature-settings: 'dlig' 1;
+}
+
+input {
+ border-radius:2px;background-color:aliceblue;
+}
+
+input:disabled {
+ background-color: pink; color:#888;
+}
+
+.prompt {
+ color:red;
+}
+
+#_ca_page_header {
+ text-align:center;font-family:"Trebuchet MS",Arial; width:800px;margin:auto;
+}
+

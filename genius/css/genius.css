@@ -1,0 +1,362 @@
+/*----------------------- Globals ------------------------ */
+
+.black { color:black }
+::placeholder {
+    color:black;
+    opacity: 1;
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+}
+a {
+    text-decoration: none;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/*-------------------------------------------------------*/
+/* Styles used by all panels */
+
+/* This is the generic class for an overlay panel. Inherit this
+   class and override top, left, z-index, maybe width and height
+   Default for display is none. 
+ */
+.gm-overlay {
+  width:800px;
+  height:800px;
+
+  margin:auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: absolute;
+
+  overflow:auto;
+  margin: auto;
+
+  opacity:0.90;
+  background: #f8f8f8;
+  border-radius:5px;
+  box-shadow: 10px 10px 25px black;
+  
+  display:none;
+}
+
+/* The X mark to close the overlay window */
+.gm-overlay-x {
+  font-size: 25px;
+  color:red;
+  text-decoration: none;
+  float:right;
+  cursor:pointer;
+}
+
+/* Layer 1 --------------------- home page ---------------------
+   Contains the big YES/NO Circle
+ */
+#gm-hack { height:48px; }
+#gm-message {
+    height:32px;
+    color:red;
+    font-weight:bold;
+}
+#gm-message:.gm-show-message {
+    transition: 2s;
+    opacity: 1;
+}
+#gm-message:not(.gm-show-message) {
+    transition: 2s;
+    opacity:0.01;
+    color:white;
+}
+
+#gm-title {
+    font-family: 'Quicksand', sans-serif;
+    font-weight:normal;
+    color: purple;
+    text-align:center;
+    text-shadow: 2px 2px 5px gray;
+    font-size: 36px;
+    padding-top: 0px;
+    padding-bottom: 25px;
+}
+
+#gm-content { /* The main content window (with the big disc) */
+    width:800px;
+    margin:auto;
+    padding-top: 0px;
+    position: relative;
+
+    text-align: center;
+}
+
+/* YES/NO input round button
+ */  
+#gm-yn-div {
+    width:600px;
+    height:600px;
+    margin:auto;
+
+    border-radius: 50%;
+    box-shadow: 0px 0px 100px black;
+
+    text-align:center;
+}
+#gm-yn-div.gm-yn-ok {
+    background-image: url('/genius/img/genius-in.jpg');
+    box-shadow: 0px 0px 25px black;
+    transition:0.5s;
+}
+#gm-yn-div:not(.gm-yn-ok) {
+    background-image: url('/genius/img/genius-out.jpg');
+    box-shadow: 0px 0px 100px black;
+    transition:0.5s;
+}
+
+#gm-yn-input {
+    display:block;
+    margin:auto;
+    border: 1px solid black;
+    border-radius: 5px;
+
+    position:relative;
+    top:41%;
+    
+    width: 78%;
+    height: 60px;
+
+    text-align:center;
+    background-color: rgba(255,255,255,0);
+    color: black;
+    
+    font-family:'Quicksand',sans-serif;
+    font-size: 32px;
+}
+#gm-yn-input.gm-yn-ok {
+    transition:0.5s;
+    color:#ec9191;
+}
+#gm-yn-input:not(.gm-yn-ok) {
+    color:black;
+    transition:0.5s;
+    width: 400px;
+}
+#gm-yn-input:focus, input:focus {
+    outline: none;
+}
+
+#gm-genii {
+    text-align:center;
+    font-size: 12px;
+    color:darkblue;
+    cursor:pointer;
+    transition:0.5s;
+}
+#gm-genii:hover {
+    color:red;
+    font-size:24px;
+    transition:0.5s;
+}
+
+/* ------------------------------------------------------------------- */
+/* Z index 2 (home was 1). Panel contains waitlist entry screen
+   Also has the circle for name/email input
+ */
+
+#gm-name-email-overlay {
+    border: 1px solid darkgray;
+    top:0;
+    left:0;
+    z-index: 2;
+}
+
+.gm-title {
+    font-weight:normal;
+    color: purple;
+    text-align:center;
+    text-shadow: 2px 2px 5px gray;
+    font-size: 36px;
+    padding-bottom: 5px;
+}
+.gm-subtitle {
+    font-weight:normal;
+    color: black;
+    text-align:center;
+    text-shadow: 2px 2px 5px gray;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+#gm-features {
+    width: 600px;
+    margin:auto;
+    color: darkred;
+    font-size:14px;
+}
+
+#gm-join {
+    color: red;
+    font-size: 24px;
+    text-shadow: 2px 2px 5px gray;
+    padding-bottom:10px;
+}
+
+/* ------------------------------------------------------------------- */
+/* Z index 3 (> info panel). Contains
+ */
+
+#gm-name-email-entry-div {         /* The round name/email button */
+    width:350px;
+    height:350px;
+    margin:auto;
+
+    border-radius: 50%;
+    box-shadow: 0px 0px 100px black;
+
+    background-image: url("/genius/img/genius-bg.jpg");
+    background-size: contain;
+    text-align:center;
+
+    font-size:18px; 
+}
+#gm-name-email-entry-div.gm-entry-ok {
+    box-shadow: 0px 0px 25px black;
+    transition:0.5s;
+}
+#gm-name-email-entry-div:not(.gm-entry-ok) {
+    box-shadow: 0px 0px 100px black;
+    transition:0.5s;
+}
+
+.gm-input {
+    display:block;
+    margin:auto;
+
+    position:relative;
+    top:35%;
+    
+    text-align:center;
+    background-color: rgba(255,255,255,0);
+    color: black;
+    
+    font-family:'Quicksand',sans-serif;
+    font-size: 24px;
+}
+#gm-input.gm_input-ok {
+    border: 1px solid black;
+    border-radius: 5px;
+
+    transition:0.5s;
+    color:#ec9191;
+}
+#gm-input:not(.gm_input-ok) {
+    color:black;
+    transition:0.5s;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 400px;
+}
+
+#gm-name {
+    width:250px;
+}
+#gm-name.gm-valid-name {
+    transition:0.5s;
+    color:#ec9191;
+}
+#gm-name:not(.gm-valid-name) {
+    color:black;
+    transition:0.5s;
+}
+
+#gm-email {
+    width:250px;
+}
+#gm-email.gm-valid-email {
+    transition:0.5s;
+    color:#ec9191;
+}
+#gm-email:not(.gm-valid-email) {
+    color:black;
+    transition:0.5s;
+}
+
+/* ------------------------------------------------------------------- */
+/* Layer 3 - Registration status panel
+ */
+
+#gm-rego-status-overlay {
+  width:600px;
+  height:600px;
+
+  margin:auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: absolute;
+  top:50px;
+  left:100px;
+  z-index:3;
+
+  overflow:auto;
+  margin: auto;
+
+  opacity:0.90;
+  background: #f8f8f8;
+  border-radius:5px;
+  box-shadow: 10px 10px 25px black;
+  
+  display:none;
+}
+
+/* The X mark to close the overlay window */
+#gm-rego-status-overlay-x {
+  font-size: 25px;
+  color:red;
+  text-decoration: none;
+  float:right;
+  cursor:pointer;
+}
+
+#gm-rego-status-text {
+    font-size: 32px;
+    color: purple;
+}
+
+#gm-waitlist-number {
+    font-size: 56px;
+    text-shadow: 2px 2px 3px black;
+    color:red;
+}    
+
+/*--------------------------------------------------------------*/
+/* Genii overlay z-index 10
+ */
+#gm-genii-overlay {
+  width:600px;
+  height:600px;
+  top:50px;
+  left:100px;
+  z-index:10;
+
+  display:none;
+}
+
+#gm-genius-name {
+    font-size: 32px;
+}
+
+.gm-genii-reddit-link {
+    color:darkblue;
+    font-size:24px;
+    font-weight:normal;
+    transition:1s;
+}
+.gm-genii-reddit-link:hover {
+    color:red;
+    font-size:32px;
+    font-weight:normal;
+    transition:1s;
+}
+
+/*--------------------------------------------*/
+    

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>CS2C - TreeWhiz: Visualize your Trees</title>
+  <link rel="stylesheet" href="../css/app.css" />
+  <style>
+    p { font-size: 1.3em; color: darkred; }
+    pre { font-size: 1.1em; color: blue; }
+  </style>
+ </head>
+
+ <body>
+  <h1>Foothill TreeWhiz - Visualize your Trees</h1>
+
+  <p>Of course, you can (and should) implement your own to_json()
+  method. But if you want a reference and guidance, here it is:</p>
+
+  <p>You need to make one small minor change to the FHtree.h header
+     file originally written by Professor Loceff. Add the following
+     lines to the bottom of the FHtree class definition:</p>
+
+  <pre>
+    // New in V2
+    public:
+        string to_json() const { return to_json(mRoot, 0); }
+    protected:
+        string to_json(FHtreeNode&lt;Object&gt; *treeNode, int level) const;
+  </pre>
+
+  <p>Then add the implementation
+  of <span class=codespan>to_json()</span> out of line, below the
+  class definition:
+
+  <pre>
+    // New in V2
+    template &lt;class Object&gt;
+    string FHtree&lt;Object&gt;::to_json(FHtreeNode&lt;Object&gt; *treeNode, int level) const {
+        static string blankString = "                                    ";
+        string indent = blankString.substr(0, level);
+
+        string result = indent + "{\n";
+
+        result += indent + " \"name\": \"" + treeNode-&gt;data + "\"";
+        result += treeNode-&gt;firstChild? ",\n" : "\n";
+
+        // Omit serializing non-existing children.
+        if (treeNode-&gt;firstChild) {
+            result += indent + " \"children\": [\n";
+
+            for (FHtreeNode&lt;Object&gt; *p = treeNode-&gt;firstChild; p != NULL; p = p-&gt;sib) {
+                if (p != treeNode-&gt;firstChild) result += ",\n";
+                result += to_json(p, level+2);
+            }
+
+            result += "\n" + indent + " ]\n";
+        }
+
+        result += indent + "}";
+        return result;
+    }
+  </pre>
+  
+  <p>And that's it. You can now call the JSON serializer on
+    your <span class=codeSpan>FHtree</span>s like so:
+
+  <pre>
+    std::cout &lt;&lt;  myTree.to_json() &lt;&lt;endl;
+  </pre>
+
+  <p>
+    <a href=FHtree.h>Click here</a> for the new
+    replacement <span class=codeSpan><a href=FHtree.h>FHtree.h</a></span>
+  </p>
+
+  <p>
+    Happy hacking!
+  </p>
+
+  <p>
+    &amp;
+  </p>
+
+  <div id="footerDiv">
+    Copyright (c) 2016, Foothill College.
+  </div>
+
+ </body>
+</html>

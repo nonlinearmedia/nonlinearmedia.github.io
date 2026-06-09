@@ -1,0 +1,79 @@
+/* Styles for (some of my) Foothill pages
+ * &: Apr 2016 (Foothill College, Los Altos Hills, CA 94022)
+ */
+
+body {
+    margin-left:40px; margin-right:40px;
+    padding:0px 10px 0px 10px;
+    font-family:"Trebuchet MS",Sans-serif;
+    font-size:12px;
+}
+
+h1 {
+    color: red;
+    font-size:2em;
+    text-shadow: 3px 3px 3px gray;
+    -webkit-font-feature-settings: 'dlig' 1;
+}
+
+.codeSpan {
+    font-family:"Courier New","Courier";
+}
+
+.allContainerDiv {
+    width: 1000px;
+    margin:auto;
+}
+
+.boxHeaderDiv {
+    text-align:center;font-family:"Trebuchet MS",Arial;
+    font-size: 1.1em;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.iconContainerDiv {
+    padding: 25px 25px 25px 25px;
+    text-align: center;
+    margin: auto;
+}
+
+.iconTable {
+    width:900px;
+}
+
+.iconTd {
+    width: 330px;
+    height: 330px;
+    padding: 25px 25px 25px 25px;
+    text-align:center;
+}
+
+.icon {
+    width:180px; height: 180px;
+    border: 1px solid gold;
+    border-radius: 10px;
+    -webkit-transition: width 0.5s, height 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+    transition: width 0.5s, height 0.5s, background-color 0.5s, transform 0.5s;
+}
+.icon:hover {
+    width:220px; height: 220px;
+    -webkit-transition: width 0.5s, height 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+    transition: width 0.5s, height 0.5s, background-color 0.5s, transform 0.5s;
+}
+
+.captionDiv {
+    margin-top: 10px;
+    color:darkred;
+    font-size: 0.8em;
+}
+
+#footerDiv {
+    padding:10px;
+    text-align:center;
+    color:#888;
+    font-size:10px;
+}
+
+/* ---------------------------------------------------------------------------------*/
